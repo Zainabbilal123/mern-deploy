@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
-import useFetch from '../hooks/useFetch';
+import useFetch from '../hooks/usefetch';
 import SearchBar from '../componenets/searchbar';
 import Pagination from '../componenets/pagination';
 

@@ -1,6 +1,6 @@
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../context/authcontext';
-import useFetch from '../hooks/useFetch';
+import useFetch from '../hooks/usefetch';
 import useDelete from '../hooks/usedelete';
 
 function SinglePostPage() {
