@@ -5,13 +5,13 @@ import ProtectedRoute from './componenets/protectedroutes';
 import PageSkeleton from './componenets/pageskeleton';
 
 
-const LoginPage = lazy(() => import('./pages/LoginPage'));
-const RegisterPage = lazy(() => import('./pages/RegisterPage'));
+const LoginPage = lazy(() => import('./pages/loginpage'));
+const RegisterPage = lazy(() => import('./pages/registerpage'));
 const PostsPage = lazy(() => import('./pages/postpage'));
-const SinglePostPage = lazy(() => import('./pages/SinglePostPage'));
+const SinglePostPage = lazy(() => import('./pages/singlepostpage'));
 const CreatePostPage = lazy(() => import('./pages/craetepostpage'));
-const EditPostPage = lazy(() => import('./pages/EditPostPage'));
-const DashboardPage = lazy(() => import('./pages/DashboardPage'));
+const EditPostPage = lazy(() => import('./pages/editpostpage'));
+const DashboardPage = lazy(() => import('./pages/dashboardpage'));
 
 function App() {
     return (
