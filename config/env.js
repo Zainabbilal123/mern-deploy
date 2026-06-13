@@ -1,7 +1,6 @@
 const required = [
     'MONGO_URI',
-    'JWT_SECRET',
-    'JWT_EXPIRES_IN',
+    
     
 ];
 const clientUrl = process.env.CLIENT_URL || 'http://localhost:5173';
