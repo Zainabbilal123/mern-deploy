@@ -1,29 +1,36 @@
+require('dotenv').config();
 const express = require('express');
-const app = express();
 
-// Middleware
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Basic middleware
 app.use(express.json());
 
-// ROUTES - Add these FIRST
+// Test route
 app.get('/', (req, res) => {
-    res.json({ message: 'API is working!' });
+    res.json({ 
+        status: 'success', 
+        message: 'Railway server is running!',
+        timestamp: new Date().toISOString()
+    });
 });
-
+app.get('/', (req, res) => {
+    res.json({ 
+        status: 'success',
+        message: 'MERN Blog API is running!',
+        endpoints: {
+            auth: '/auth/register, /auth/login',
+            posts: '/posts',
+            health:'/health'
+        }
+    });
+});
 app.get('/health', (req, res) => {
-    res.json({ status: 'ok' });
-});
-
-// Your other routes (auth, posts, etc.)
-app.use('/auth', authRoutes);
-app.use('/posts', postRoutes);
-
-// 404 handler - LAST
-app.use((req, res) => {
-    res.status(404).json({ error: 'Route not found' });
+    res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
 
 // Start server
-const PORT = process.env.PORT || 3000;
 app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Server running on port ${PORT}`);
+    console.log(`✅ Server running on port ${PORT}`);
 });
