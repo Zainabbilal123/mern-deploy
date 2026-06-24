@@ -15,6 +15,16 @@ app.get('/', (req, res) => {
         timestamp: new Date().toISOString()
     });
 });
+app.get('/', (req, res) => {
+    res.json({ 
+        status: 'success',
+        message: 'MERN Blog API is running!',
+        endpoints: {
+            auth: '/auth/register, /auth/login',
+            posts: '/posts'
+        }
+    });
+});
 
 // Start server
 app.listen(PORT, '0.0.0.0', () => {
